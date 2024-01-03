@@ -174,7 +174,7 @@ class _MenuCartItemsState extends State<MenuCartItems> {
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 Text(
-                                  'Apply  Coupon   Code',
+                                  ' Apply Coupon Code',
                                   style: googleFonts,
                                 ),
                                 4.pw,
@@ -234,8 +234,9 @@ class _MenuCartItemsState extends State<MenuCartItems> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text('GraNd TotaL',
-                              style: googleFonts.copyWith(fontSize: 34)),
+                          Text('Grand TotaL',
+                              style: googleFonts.copyWith(
+                                  fontSize: 27, fontWeight: FontWeight.bold)),
                           Text(
                             '£ 89.100',
                             style: googleFonts,
@@ -247,16 +248,13 @@ class _MenuCartItemsState extends State<MenuCartItems> {
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
                               elevation: 10,
+                              minimumSize: const Size(40, 15),
                               shadowColor:
                                   const Color.fromARGB(255, 227, 103, 144)),
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                                vertical: 7, horizontal: 110.0),
-                            child: Text(
-                              'Pay Now',
-                              style: googleFonts.copyWith(
-                                fontSize: 28,
-                              ),
+                          child: Text(
+                            'Pay Now',
+                            style: googleFonts.copyWith(
+                              fontSize: 25,
                             ),
                           ))
                     ],
