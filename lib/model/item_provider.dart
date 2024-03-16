@@ -9,16 +9,16 @@ class ItemProvider with ChangeNotifier {
   double get totalPrice => _totalPrice;
 
   void _setPrefItem() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    prefs.setInt('item_counter', _counter);
-    prefs.setDouble('item_price', _totalPrice);
+    SharedPreferences preference = await SharedPreferences.getInstance();
+    preference.setInt('item_counter', _counter);
+    preference.setDouble('item_price', _totalPrice);
     notifyListeners();
   }
 
   void _getPrefItem() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    _counter = prefs.getInt('item_counter') ?? 0;
-    _totalPrice = prefs.getDouble('item_price') ?? 0;
+    SharedPreferences preference = await SharedPreferences.getInstance();
+    _counter = preference.getInt('item_counter') ?? 0;
+    _totalPrice = preference.getDouble('item_price') ?? 0;
     notifyListeners();
   }
 

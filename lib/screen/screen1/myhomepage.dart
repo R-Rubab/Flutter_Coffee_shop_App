@@ -23,8 +23,7 @@ class _MyHomePageState extends State<MyHomePage> {
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: NetworkImage(
-                    'https://images.pexels.com/photos/2878712/pexels-photo-2878712.jpeg?auto=compress&cs=tinysrgb&w=600'),
+                image: AssetImage('assets/images/splash.jpeg'),
                 fit: BoxFit.cover,
                 opacity: 0.89,
               ),

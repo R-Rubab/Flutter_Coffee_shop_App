@@ -202,8 +202,8 @@ class _HomepageState extends State<Homepage> {
                               onTap: () {
                                 dbHelper!
                                     .insert(ItemNames(
-                                        coffename: itemnamee.coffename,
-                                        urlimg: itemnamee.urlimg,
+                                        coffeeName: itemnamee.coffeeName,
+                                        urlImg: itemnamee.urlImg,
                                         price: itemnamee.price))
                                     .then((value) {
                                   // ignore: avoid_print
@@ -221,14 +221,14 @@ class _HomepageState extends State<Homepage> {
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   MenuItems(
-                                    name: itemnamee.coffename,
+                                    name: itemnamee.coffeeName,
                                     price: itemnamee.price,
-                                    urlimage: itemnamee.urlimg,
+                                    urlimage: itemnamee.urlImg,
                                   ),
                                   MenuItems(
-                                    name: itemname1.coffename,
+                                    name: itemname1.coffeeName,
                                     price: itemname1.price,
-                                    urlimage: itemname1.urlimg,
+                                    urlimage: itemname1.urlImg,
                                   ),
                                 ],
                               ),
@@ -317,7 +317,7 @@ class MenuItems extends StatelessWidget {
                   onPressed: () {
                     dbHelper
                         .insert(ItemNames(
-                            coffename: name, urlimg: urlimage, price: price))
+                            coffeeName: name, urlImg: urlimage, price: price))
                         .then((value) {
                       // ignore: avoid_print
                       print('object');

@@ -28,7 +28,7 @@ class DBHelper {
 
   _onCreate(Database db, int version) async {
     await db.execute(
-        'CREATE TABLE ItemName(coffeename VARCHAR  ,price VARCHAR,urlimg VARCHAR)');
+        'CREATE TABLE ItemName(coffeeName VARCHAR  ,price VARCHAR,urlImg VARCHAR)');
   }
 
   Future<ItemNames> insert(ItemNames itemName) async {

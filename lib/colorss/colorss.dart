@@ -38,7 +38,9 @@ const Shadow shadow = Shadow(
     blurRadius: 4);
 
 TextStyle googleFonts = GoogleFonts.lobster(
-    textStyle: const TextStyle(fontSize: 25, letterSpacing: 2));
+  textStyle:
+      const TextStyle(fontSize: 25, letterSpacing: 2, color: Colors.black),
+);
 
 // ----------------   SixeBox Extension --------------
 extension PaddingSizeBox on num {

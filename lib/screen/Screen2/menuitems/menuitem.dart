@@ -18,6 +18,7 @@ class _MenuCartItemsState extends State<MenuCartItems> {
     // final item = Provider.of<ItemProvider>(context);
     return SafeArea(
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         appBar: AppBar(
           backgroundColor: backgroundColor,
           title: Text(
@@ -45,15 +46,14 @@ class _MenuCartItemsState extends State<MenuCartItems> {
           centerTitle: true,
         ),
         body: Padding(
-          padding: const EdgeInsets.all(12.0),
+          padding: const EdgeInsets.symmetric(horizontal: 12.0),
           child: Column(
             children: [
               Expanded(
-                child: SizedBox(
-                    child: ListView.builder(
+                child: ListView.builder(
                   itemCount: itemName.length,
                   itemBuilder: (context, index) {
-                    ItemNames itemname = itemName[index];
+                    ItemNames itemNames = itemName[index];
 
                     return Padding(
                       padding: const EdgeInsets.symmetric(
@@ -84,7 +84,7 @@ class _MenuCartItemsState extends State<MenuCartItems> {
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(32),
                                   image: DecorationImage(
-                                      image: AssetImage(itemname.urlimg),
+                                      image: AssetImage(itemNames.urlImg),
                                       fit: BoxFit.cover)),
                               width: 120,
                               height: 130,
@@ -93,7 +93,7 @@ class _MenuCartItemsState extends State<MenuCartItems> {
                               child: Stack(
                                 children: [
                                   Text(
-                                    '   Cappuchino \n ${itemname.coffename}\n\n \t\t\t  ${itemname.price}',
+                                    '   Cappuccino \n ${itemNames.coffeeName}\n\n \t\t\t  ${itemNames.price}',
                                     style: googlefonts,
                                   ),
                                   Positioned(
@@ -152,7 +152,7 @@ class _MenuCartItemsState extends State<MenuCartItems> {
                       ),
                     );
                   },
-                )),
+                ),
               ),
               Expanded(
                 child: SizedBox(
@@ -160,7 +160,7 @@ class _MenuCartItemsState extends State<MenuCartItems> {
                   height: MediaQuery.of(context).size.height,
                   child: Column(
                     children: [
-                      const LineBreakWidges(),
+                      const LineBreakWidget(),
                       Stack(
                         alignment: Alignment.centerLeft,
                         children: [
@@ -229,7 +229,7 @@ class _MenuCartItemsState extends State<MenuCartItems> {
                           Text('£ 59.1', style: googleFonts),
                         ],
                       ),
-                      const LineBreakWidges(),
+                      const LineBreakWidget(),
                       // 4.ph,
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -269,8 +269,8 @@ class _MenuCartItemsState extends State<MenuCartItems> {
   }
 }
 
-class LineBreakWidges extends StatelessWidget {
-  const LineBreakWidges({
+class LineBreakWidget extends StatelessWidget {
+  const LineBreakWidget({
     super.key,
   });
 

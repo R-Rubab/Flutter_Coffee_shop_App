@@ -1,18 +1,18 @@
 class ItemNames {
-  String coffename;
-  String urlimg;
+  String coffeeName;
+  String urlImg;
   var price;
   ItemNames(
-      {required this.coffename, required this.urlimg, required this.price});
+      {required this.coffeeName, required this.urlImg, required this.price});
 
-  ItemNames.fromMap(Map<dynamic, dynamic> itemsname)
-      : coffename = itemsname['coffename'],
-        urlimg = itemsname['urlimg'],
-        price = itemsname['price'];
+  ItemNames.fromMap(Map<dynamic, dynamic> itemsName)
+      : coffeeName = itemsName['coffeeName'],
+        urlImg = itemsName['urlImg'],
+        price = itemsName['price'];
   Map<String, Object?> toMap() {
     return {
-      coffename: coffename,
-      urlimg: urlimg,
+      coffeeName: coffeeName,
+      urlImg: urlImg,
       price: price,
     };
   }
@@ -20,40 +20,44 @@ class ItemNames {
 
 List<ItemNames> itemName = [
   ItemNames(
-      coffename: 'With Oat Milk',
-      urlimg: 'assets/images/coff7.jpeg',
+      coffeeName: 'With Oat Milk',
+      urlImg: 'assets/images/coff7.jpeg',
       price: '£ 45.0'),
   ItemNames(
-      coffename: 'Cinnamon & Coca',
-      urlimg: 'assets/images/coff2.jpg',
+      coffeeName: 'Cinnamon & Coca',
+      urlImg: 'assets/images/coff2.jpg',
       price: '£ 37.1'),
   ItemNames(
-      coffename: 'Drizzled Caramel',
-      urlimg: 'assets/images/coff3.jpeg',
+      coffeeName: 'Drizzled Caramel',
+      urlImg: 'assets/images/coff3.jpeg',
       price: '£ 53.2'),
   ItemNames(
-      coffename: 'Dolgona Whipped Macha',
-      urlimg: 'assets/images/coff4.png',
+      coffeeName: 'Bologna Whipped Mocha',
+      urlImg: 'assets/images/coff4.png',
       price: '£ 100.0'),
   ItemNames(
-      coffename: 'Bursting Blueberry',
-      urlimg: 'assets/images/coff6.jpeg',
+      coffeeName: 'Bursting Blueberry',
+      urlImg: 'assets/images/coff6.jpeg',
       price: '£ 299'),
 ];
 
 List<ItemNames> list = [
   ItemNames(
-      coffename: 'Cappuchino',
-      urlimg: 'assets/images/coff1.avif',
+      coffeeName: 'Cappuccino',
+      urlImg: 'assets/images/coff3.jpg',
       price: '£ 55.0'),
   ItemNames(
-      coffename: 'Latte', urlimg: 'assets/images/coff5.jpeg', price: '£ 55.0'),
+      coffeeName: 'Latte', urlImg: 'assets/images/coff5.jpeg', price: '£ 55.0'),
   ItemNames(
-      coffename: 'Expresso', urlimg: 'assets/images/cof3.jpg', price: '£ 77.5'),
+      coffeeName: 'Espresso',
+      urlImg: 'assets/images/cof3.jpg',
+      price: '£ 77.5'),
   ItemNames(
-      coffename: 'Americano', urlimg: 'assets/images/cof4.jpeg', price: '£ 83'),
+      coffeeName: 'Americano',
+      urlImg: 'assets/images/cof4.jpeg',
+      price: '£ 83'),
   ItemNames(
-      coffename: 'Flat White',
-      urlimg: 'assets/images/cof5.jpeg',
+      coffeeName: 'Flat White',
+      urlImg: 'assets/images/cof5.jpeg',
       price: '£ 99.1'),
 ];
