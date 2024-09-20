@@ -37,3 +37,10 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+
+
+    // Retrieve the item data from the route arguments
+    // final Map<String, String>? item =
+    //     ModalRoute.of(context)?.settings.arguments as Map<String, String>?;
+
